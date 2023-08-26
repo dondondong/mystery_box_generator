@@ -1,0 +1,23 @@
+{
+  "name": "Blind-Box-Generator",
+  "version": "1.0.0",
+  "description": "Your Figma Plugin",
+  "main": "code.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "npm run build -- --watch"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@figma/plugin-typings": "*",
+    "@types/node": "^20.4.6",
+    "ts-loader": "^9.4.4",
+    "typescript": "*",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "babylonjs": "^6.14.2"
+  }
+}

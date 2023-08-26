@@ -1,0 +1,26 @@
+{
+  "name": "NIO｜造盒子",
+  "id": "1276846345942198255",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figma",
+    "dev"
+  ],
+  "ui": "ui.html",
+  "networkAccess": {
+    "allowedDomains": [
+      "https://my-app.cdn.com",
+      "wss://socket.io",
+      "https://preview.babylonjs.com",
+      "https://code.jquery.com",
+      "https://libs.cdnjs.net",
+      "https://cdnjs.cloudflare.com"
+    ],
+    "devAllowedDomains": [
+      "http://localhost:3000"
+    ]
+  }
+}
