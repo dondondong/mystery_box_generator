@@ -26,15 +26,15 @@ figma.ui.onmessage = msg => {
     let backgroundBox = getItem(backgroundBox4UI)
 
     if (!mainBox || mainBox.length === 0) {
-      figma.ui.postMessage({ type: 'sayMessage', msg: `主体盒子命名有误，找不到该Slice,请命名为${mainBox4UI}！` })
+      figma.ui.postMessage({ type: 'sayMessage', msg: `主体盒子命名有误，找不到该Slice,请命名为${mainBox4UI}` })
       return;
     }
     if (!coverBox || coverBox.length === 0) {
-      figma.ui.postMessage({ type: 'sayMessage', msg: `盒子底部文件命名有误，找不到该Slice,请命名为${coverBox4UI}！` })
+      figma.ui.postMessage({ type: 'sayMessage', msg: `盒子底部文件命名有误，找不到该Slice,请命名为${coverBox4UI}` })
       return;
     }
     if (!backgroundBox || backgroundBox.length === 0) {
-      figma.ui.postMessage({ type: 'sayMessage', msg: `背景文件命名有误，找不到该Slice,请命名为${backgroundBox4UI}！` })
+      figma.ui.postMessage({ type: 'sayMessage', msg: `背景文件命名有误，找不到该Slice,请命名为${backgroundBox4UI}` })
       return;
     }
 
