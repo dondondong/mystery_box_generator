@@ -1,44 +1,12 @@
-// This plugin will open a window to prompt the user to enter a number, and
-// it will then create that many rectangles on the screen.
 
-// This file holds the main code for plugins. Code in this file has access to
-// the *figma document* via the figma global object.
-// You can access browser APIs in the <script> tag inside "ui.html" which has a
-// full browser environment (See https://www.figma.com/plugin-docs/how-plugins-run).
 
-import { createRectangles } from "./rectangle-module"
-
-import * as fs from 'fs'
-// const fs = require('@types/node/fs');
-
-// This shows the HTML page in "ui.html".
 figma.showUI(__html__);
 
 // 插件外壳的大小
 figma.ui.resize(415, 530)
 
-// let _bytes:any = null;
-// Calls to "parent.postMessage" from within the HTML page will trigger this
-// callback. The callback will be passed the "pluginMessage" property of the
-// posted message.
+// 接收 figma message
 figma.ui.onmessage = msg => {
-  // One way of distinguishing between different types of messages sent from
-  // your HTML page is to use an object with a "type" property like this.
-  if (msg.type === 'create-rectangles') {
-    const nodes: SceneNode[] = [];
-    for (let i = 0; i < msg.count; i++) {
-      // const rect = figma.createRectangle();
-      // rect.x = i * 150;
-      // rect.fills = [{type: 'SOLID', color: {r: 1, g: 0.5, b: 0}}];
-      // figma.currentPage.appendChild(rect);
-      // nodes.push(rect);
-      createRectangles(i, nodes)
-    }
-    figma.currentPage.selection = nodes;
-    figma.viewport.scrollAndZoomIntoView(nodes);
-  }
-
-
 
   // 全局变量
   const mainBox4UI = `Generate_MysteryBox_Sides_Merge`;
@@ -85,6 +53,8 @@ figma.ui.onmessage = msg => {
     Promise.all([promise1, promise2, promise3]).then((bytes) => {
       figma.ui.postMessage({ type: 'redererBox', bytes })
       figma.notify('已生成')
+
+      // 新增一个 Frame
       // const frame = figma.createFrame()
       // frame.x = 200
       // frame.resize(200, 230)
@@ -182,23 +152,8 @@ figma.ui.onmessage = msg => {
     Promise.all([singleBoxPromise, backgroundBoxPromise, allBoxPromise]).then((bytes: any) => {
 
       figma.ui.postMessage({ type: 'downloadAllImgZip', bytes })
-      // figma.notify('已下载')
-      // const image = figma.createImage(bytes)
-
-      // const frame = figma.createFrame()
-      // frame.x = 200
-      // frame.resize(200, 230)
-      // frame.fills = [{
-      //   imageHash: image.hash,
-      //   scaleMode: "FILL",
-      //   scalingFactor: 1,
-      //   type: "IMAGE",
-      // }]
     })
   }
-
-  // Make sure to close the plugin when you're done. Otherwise the plugin will
-  // keep running, which shows the cancel button at the bottom of the screen.
 
   // figma.closePlugin();
 };
