@@ -86,59 +86,65 @@
     margin: 20px 0 0 0;
   }
 
-  .btns {
+  a.button {
     flex: 1;
-    width: 226px;
+    /* width: 226px; */
     height: 50px;
     line-height: 50px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.03);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
+    color: rgba(0, 0, 0, 1);
     border-radius: 5px;
     transition: all 0.15s ease-in-out;
+    border: none;
   }
 
-  .btns:hover {
+  a.button:hover {
     background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 1);
     cursor: pointer;
+    border: none;
   }
 
-  .btns:active {
+  a.button:active {
     background-color: rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 1);
+    border: none;
   }
 
   /* 注释文字 */
   .captionContainer {
     position: absolute;
     padding: 5px 8px;
-    bottom: 0;
+    /* bottom: 0;
     left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.02);
+    right: 0; */
+    /* background-color: rgba(0, 0, 0, 0.02); */
   }
 
 
   .captionText {
     position: relative;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 12px;
-    transform: scale(0.75);
+    transform: scale(0.95);
     transform-origin: 0 0;
-    color: rgba(0, 0, 0, 0.2);
-    margin-top: 3px;
+    color: rgba(0, 0, 0, .3);
+    /* margin-top: 3px; */
   }
 
   a {
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, .6);
     transition: all 0.15s ease-in-out;
     text-decoration: none;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
 
   a:hover {
-    color: rgba(0, 0, 0, 0.35);
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.35);
+    color: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
     cursor: pointer;
   }
 
@@ -199,6 +205,12 @@
   input.cmn-toggle-round:checked+label:after {
     margin-left: 17px;
   }
+
+  hr {
+    border-width: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, .06);
+    margin-top: 30px;
+  }
 </style>
 
 <div id="generatorBlindBox" class="container">
@@ -222,13 +234,33 @@
   </div>
   <div class="btns-wrap">
     <!-- <div  style></div> -->
-    <div id="exportAllImg" class="btns">下载素材包</div>
+    <a  class="button" target="_blank" href="https://www.figma.com/file/vDivWv1HvGpzKJTsL8THeQ/%E7%A4%BE%E5%8C%BA%E7%9B%B2%E7%9B%92_Playground_1.0?type=design&node-id=2%3A3&mode=design&t=3Wm0Lgl0sfF4p3xt-1" style="margin-right: 20px;">打开插件模板</a>
+    <a id="exportAllImg" class="button">导出素材</a>
   </div>
-  <div class="captionContainer">
-    <div class="captionText">*需搭配指定的 Figma 模板使用 <span style="opacity: .5;"> ｜ </span><span><a target="_blank"
+  <div>
+
+    <hr>
+
+    <div class="captionText">*必须搭配模板使用 ｜ 
+
+        
+      <span><a target="_blank"
+          href="https://nio.feishu.cn/docx/UlIOdfezFovihfxCVZMc7Z9yn9d">查看插件教程</a></span><span
+        style="opacity: .5;"></span>
+
+        <span> ｜ </span>
+
+        <span><a target="_blank"
+          href="https://nio.feishu.cn/wiki/O9xbwkI0oiIzmDk9tr9cBtTNn6b">查看盲盒设计规范</a></span><span
+        style="opacity: .5;"></span>
+
+      <!-- <span><a target="_blank"
           href="https://www.figma.com/file/OMU97mMhxs7tUlmQ6XqmIZ/%E7%A4%BE%E5%8C%BA%E7%9B%B2%E7%9B%92_Playground_Test?type=design&node-id=2%3A3&mode=design&t=7GXNGw5pwhAHvOCF-1">打开模板</a></span><span
-        style="opacity: .5;"> ｜ </span><span><a target="_blank"
-          href="https://nio.feishu.cn/docx/UlIOdfezFovihfxCVZMc7Z9yn9d?from=from_copylink">反馈问题</a></span></div>
+        style="opacity: .5;"></span> -->
+
+      <!-- <span><a target="_blank"
+          href="https://nio.feishu.cn/docx/UlIOdfezFovihfxCVZMc7Z9yn9d?from=from_copylink">反馈问题</a></span> -->
+    </div>
 
   </div>
 

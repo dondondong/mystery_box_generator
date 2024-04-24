@@ -98,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 // This shows the HTML page in "ui.html".
 figma.showUI(__html__);
 // 插件外壳的大小
-figma.ui.resize(415, 530);
+figma.ui.resize(415, 550);
 // let _bytes:any = null;
 // Calls to "parent.postMessage" from within the HTML page will trigger this
 // callback. The callback will be passed the "pluginMessage" property of the

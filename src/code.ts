@@ -3,7 +3,7 @@
 figma.showUI(__html__);
 
 // 插件外壳的大小
-figma.ui.resize(415, 530)
+figma.ui.resize(415, 550)
 
 // 接收 figma message
 figma.ui.onmessage = msg => {
