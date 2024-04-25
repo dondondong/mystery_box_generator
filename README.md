@@ -1,5 +1,5 @@
 
-# NIO｜造盒子
+# 造盒子
 
 figma 插件主页（仅企业内部可访问）：https://www.figma.com/community/plugin/1276846345942198255/nio
 
